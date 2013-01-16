@@ -2,8 +2,8 @@
 
 Es una aplicación principalmente para aprender el manejo de los siguientes dos Frameworks:
 
--- Laravel Server-Side PHP Framework
--- Backbone.js Client-Side Javascript Framework
+- Laravel Server-Side PHP Framework
+- Backbone.js Client-Side Javascript Framework
 
 [Official Website & Documentation](http://laravel.com)
 

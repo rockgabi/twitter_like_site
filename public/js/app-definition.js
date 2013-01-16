@@ -9,11 +9,27 @@ define(['backbone'], function(Backbone){
 
 	App.Router = Backbone.Router.extend({
 		routes: {
-			'' : 'index'
+			'' : 'indexRoute',
+			'profile' : 'profileRoute'
 		},
 
-		index: function() {
+		indexRoute: function() {
 			console.log('This is the home.');
+			c = new App.Collections.Resources({ });
+			c.on('error', function(m,e) { console.log(e); });
+			c.reset();
+
+			cv = new App.Views.ResourcesView({ collection: c });
+			c.fetch();
+
+			// Vista del nuevo recursos, se pasa como parametro la colección
+			// para que pueda actualizarla
+			ar = new App.Views.AddResourceView({ collection: c });
+		},
+
+		profileRoute: function() {
+			pv = new App.Views.ProfileView();
+			console.log(pv);
 		}
 	})
 

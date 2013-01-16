@@ -14,8 +14,14 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
 
-    @yield('styles')
-    @yield('scripts')
+    @section('styles')
+        <link rel="stylesheet" type="text/stylesheet" href="/css/normalize.css">
+        <link rel="stylesheet" type="text/stylesheet" href="/css/main.css">
+    @yield_section
+
+    @section('scripts')
+
+    @yield_section
 
 
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->

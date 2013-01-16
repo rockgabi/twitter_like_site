@@ -48,6 +48,7 @@ Route::delete('resources/(:any)', array('as' => 'resourceDelete', 'uses' => 'res
 Route::controller('account');
 Route::controller('home');
 Route::controller('resources');
+Route::controller('profile');
 
 
 

@@ -7,8 +7,6 @@ It's an application for learning the basic stuff from two different frameworks t
 
 It's intended to build the knowledge from a 'good practices' point of view. Using the native Framework cappabilities is the main objective.
 
-[Official Website & Documentation](http://laravel.com)
-
 ## Feature Overview
 
 - Registering and Loging System, managed by the Server-Side Framework

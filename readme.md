@@ -1,9 +1,9 @@
-# [Laravel](http://laravel.com) - A PHP Framework For Web Artisans
+# [Blackhole](http://blackhole-v2.dev) - A PHP Framework For Web Artisans
 
-Laravel is a clean and classy framework for PHP web development. Freeing you
-from spaghetti code, Laravel helps you create wonderful applications using
-simple, expressive syntax. Development should be a creative experience that you
-enjoy, not something that is painful. Enjoy the fresh air.
+Es una aplicación principalmente para aprender el manejo de los siguientes dos Frameworks:
+
+-- Laravel Server-Side PHP Framework
+-- Backbone.js Client-Side Javascript Framework
 
 [Official Website & Documentation](http://laravel.com)
 

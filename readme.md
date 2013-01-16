@@ -5,6 +5,11 @@ It's an application for learning the basic stuff from two different frameworks t
 - Laravel Server-Side PHP Framework
 - Backbone.js Client-Side Javascript Framework
 
+Other libraries included:
+- RequireJS for managin Javascript Modules
+- jQuery for DOM manipulation
+- UnderscoreJS for Client-Side templating
+
 It's intended to build the knowledge from a 'good practices' point of view. Using the native Framework cappabilities is the main objective.
 
 ## Feature Overview

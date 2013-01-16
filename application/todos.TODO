@@ -1,3 +1,5 @@
 For today:
-  ☐ Read emails
-  ☐ Watch directories
+  ☐ Implement Profile
+    ☐ Generate Backbone ProfileView at Backbone
+    ☐ Generate Profile Service at Laravel
+    ☐ Do Styling

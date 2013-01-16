@@ -1,5 +1,5 @@
 For today:
   ☐ Implement Profile
-    ☐ Generate Backbone ProfileView at Backbone
+    ✔ Generate Backbone ProfileView at Backbone @done (13-01-15 23:44)
     ☐ Generate Profile Service at Laravel
     ☐ Do Styling

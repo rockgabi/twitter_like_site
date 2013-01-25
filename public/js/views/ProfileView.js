@@ -27,8 +27,12 @@ define(['backbone', 'tpl', '/js/app-definition.js'], function(Backbone, tpl, App
 				name : 'Gabriel',
 				reg_date : '27 Jun 2012',
 				compartidos : 4
-			}
-			this.$el.html(this.template(fakeProfile));
+			};
+
+			console.log(App.Constant.BASE_URL);
+			
+
+			$('#main-content').html(this.template(fakeProfile));
 
 			return this;
 		}

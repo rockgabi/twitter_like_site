@@ -4,7 +4,8 @@ define(['backbone'], function(Backbone){
 		Views : {},
 		Collections : {},
 		Router : {},
-		Helpers : {}
+		Helpers : {},
+		Constant : {}
 	}
 
 	App.Router = Backbone.Router.extend({
@@ -29,9 +30,13 @@ define(['backbone'], function(Backbone){
 
 		profileRoute: function() {
 			pv = new App.Views.ProfileView();
-			console.log(pv);
+			pv.render();
 		}
-	})
+	});
+
+	App.Constant = {
+		'BASE_URL' : "<?php echo URL::base(); ?>"
+	}
 
 	return App;
 });

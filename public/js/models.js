@@ -1,6 +1,6 @@
 define(['backbone', '/js/app-definition.js'], function(Backbone, App) {
 	App.Models.Resource = Backbone.Model.extend({
-		urlRoot: '/resources',
+		urlRoot: App.Connector.Services.resources,
 
 		defaults: {
 			'id' : null,
@@ -21,7 +21,7 @@ define(['backbone', '/js/app-definition.js'], function(Backbone, App) {
 		
 		model: App.Models.Resource,
 
-		url: '/resources',
+		url: App.Connector.Services.resources,
 
 		initialize: function() {
 			this.bind('add', this.addResource, this);

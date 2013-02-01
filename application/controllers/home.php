@@ -9,10 +9,23 @@ class Home_Controller extends Base_Controller {
 		Asset::add('modernizr', 'js/vendor/modernizr-2.6.2.min.js');
 	}
 
+	/**
+	 * Renders the main application. Passes the information
+	 * necesary for the client application to work independently
+	 * from the server.
+	 *
+	 * Uses home.index view
+	 * 
+	 * @return [type] [description]
+	 */
 	public function action_index()
 	{
-
-		$view = View::make('home.index');
+		// Data for the view
+		$data = array(
+			'connector' => Config::get('connector')
+		);
+		
+		$view = View::make('home.index', $data);
 		$view->nest('footer', 'partials.footer');
 		return $view;
 	}

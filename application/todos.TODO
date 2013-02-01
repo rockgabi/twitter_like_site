@@ -1,6 +1,16 @@
-For today:
-  ☐ Implement Profile
-    ✔ Generate Backbone ProfileView at Backbone @done (13-01-16 21:18)
+Extension 1
+  ✔ Implement Profile @done (13-01-31 23:05)
+    ✔ Finish Backbone ProfileView at Backbone @done (13-01-31 23:04)
       ✔ Validate markup @done (13-01-16 21:18)
-    ☐ Generate Profile Service at Laravel
+    ✔ Generate Profile Service at Laravel @done (13-01-31 22:32)
+    ✔ Do Styling @done (13-01-31 23:05)
+
+Extension 2
+  ☐ Implement Friendship System
+    ☐ Update Model
+    ☐ Generate involving services
+    ☐ Implement involving client views
+      ☐ View for adding/removing a friend
+      ☐ View for listing and acception friendship incoming invitations
+      ☐ Update profile view for showing number of friends
     ☐ Do Styling

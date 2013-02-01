@@ -46,21 +46,16 @@
 
     <div id="overlay">&nbsp;</div>
     
-    <div class="wrapped">
-        <section id="content">
+    <div id="application" class="wrapped clearfix">
+        <div id="content">
             @yield('content')
-        </section>  <!-- Fin #content -->
+        </div>  <!-- Fin #content -->
 
         <section id="sidebar">
             @yield('sidebar')
         </section>  <!-- Fin #sidebar -->
     </div>  <!-- Fin .wrapped -->
 
-    <section id="footer">
-        @section('footer')
-        
-        @yield_section
-    </section>  <!-- Fin #footer -->
 </body>
 
 </html>

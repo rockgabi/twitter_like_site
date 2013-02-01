@@ -6,7 +6,13 @@
 @endsection
 
 @section('scripts')
+	<script type="text/javascript">
+	// Application Connector with Backend
+		var bhConnector = <?php echo json_encode($connector); ?>;
+	</script>
+
 	<script data-main= "/js/config.js" src="/js/vendor/requirejs-2.1.2.js"></script>
+	
 @endsection
 
 @section('styles')
@@ -17,15 +23,27 @@
 @section('right-bar')
 	<h3>Bienvenido {{ Auth::user()->username }}</h3>
 	<p>{{ HTML::link('logout', __('forms.button_logout')) }}</p>
-	<p>{{ HTML::link('profile', __('common.title_profile')) }}</p>
 @endsection
 
 @section('content')
+
 	<section id="main-content">
 		
 	</section>	<!-- Fin #main-content -->
 
-	<section id="resources" class="wrapped">
+	<section id="resources">
 	        
 	</section>  <!-- Fin #resources -->
+@endsection
+
+@section('sidebar')
+	<nav id="navigation" class="sidebar-item">
+		<div class="nav-item">
+			{{ HTML::link('#', 'Go home') }}
+		</div> <!-- Fin .nav-item -->
+		
+		<div class="nav-item">
+			{{ HTML::link('#profile', 'Access your profile') }}
+		</div> <!-- Fin .nav-item -->
+	</nav>	<!-- Fin #navigation -->
 @endsection

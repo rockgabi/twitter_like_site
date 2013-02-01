@@ -5,7 +5,8 @@ define(['backbone'], function(Backbone){
 		Collections : {},
 		Router : {},
 		Helpers : {},
-		Constant : {}
+		Constant : {},
+		Connector : bhConnector
 	}
 
 	App.Router = Backbone.Router.extend({
@@ -29,7 +30,17 @@ define(['backbone'], function(Backbone){
 		},
 
 		profileRoute: function() {
-			pv = new App.Views.ProfileView();
+			// Definiendo la vista de profile
+			pv = new App.Views.ProfileView({
+				// Propiedad propia para saber sobre que reemplaza esta vista. En esta variable se define el elemento del DOM a reemplazar utilizando notación de jQuery
+				placeholder: '#main-content'
+			});
+
+			if (typeof cv !== 'undefined') {
+				cv.remove();
+				cv = undefined;
+			}
+
 			pv.render();
 		}
 	});

@@ -9,12 +9,16 @@ define(['backbone', 'tpl', '/js/app-definition.js'], function(Backbone, tpl, App
 
 		},
 
+		placeholder: undefined,
+
+
 		/**
 		 * Initialize the profile view
 		 * @return undefined
 		 */
-		initialize: function() {
+		initialize: function(e) {
 			this.template = _.template(tpl.get('profile'));
+			this.placeholder = e.placeholder;
 		},
 
 		/**
@@ -24,15 +28,28 @@ define(['backbone', 'tpl', '/js/app-definition.js'], function(Backbone, tpl, App
 		 */
 		render: function(e) {
 			var fakeProfile = {
-				name : 'Gabriel',
-				reg_date : '27 Jun 2012',
-				compartidos : 4
+				username : 'Gabriel',
+				created_at : '27 Jun 2012',
+				resources_num : 4
 			};
 
-			console.log(App.Constant.BASE_URL);
+			// Perfom AJAX request for current profile at the profile service URL
+			// Render the data response by templating it
+			$.ajax({ 
+				url: App.Connector.Services.profile,
+				type: 'GET',
+				dataType: 'json',
+				context: this,
+				success: function(d) {
+					// Replace at the placeholder if defined
+					if ((typeof this.placeholder) !== 'undefined') {
+						$(this.placeholder).html(this.template(d));
+					} else {
+						$('#main-content').html(this.template(d));
+					}
+				}
+			})
 			
-
-			$('#main-content').html(this.template(fakeProfile));
 
 			return this;
 		}

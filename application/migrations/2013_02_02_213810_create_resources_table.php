@@ -1,6 +1,6 @@
 <?php
 
-class Create_Resources {
+class Create_Resources_Table {
 
 	/**
 	 * Make changes to the database.
@@ -18,8 +18,8 @@ class Create_Resources {
 			$table->integer('user_id')->unsigned(); // Hace referencia a un id 
 			// autoincrementador, por lo que no es integer, sino integer 
 			// unsigned, presentaba un problema cuando se lo hacia foreign key.
-			
-			$table->foreign('user_id')->references('id')->on('users');
+			// Foreign keys:
+			$table->foreign('user_id')->references('id')->on('users')->on_delete('no action');
 		});
 	}
 

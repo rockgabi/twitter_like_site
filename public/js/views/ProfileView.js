@@ -19,6 +19,14 @@ define(['backbone', 'tpl', '/js/app-definition.js'], function(Backbone, tpl, App
 		initialize: function(e) {
 			this.template = _.template(tpl.get('profile'));
 			this.placeholder = e.placeholder;
+			if ((typeof e.placeholder) !== 'undefined') {
+				this.placeholder = e.placeholder;
+			} else {
+				this.placeholder = '#main-content';
+			}
+
+			$(this.placeholder).html('<div class="ajax-loading">&nbsp;</div>')
+
 		},
 
 		/**
@@ -27,12 +35,6 @@ define(['backbone', 'tpl', '/js/app-definition.js'], function(Backbone, tpl, App
 		 * @return {ProfileView}
 		 */
 		render: function(e) {
-			var fakeProfile = {
-				username : 'Gabriel',
-				created_at : '27 Jun 2012',
-				resources_num : 4
-			};
-
 			// Perfom AJAX request for current profile at the profile service URL
 			// Render the data response by templating it
 			$.ajax({ 
@@ -42,11 +44,7 @@ define(['backbone', 'tpl', '/js/app-definition.js'], function(Backbone, tpl, App
 				context: this,
 				success: function(d) {
 					// Replace at the placeholder if defined
-					if ((typeof this.placeholder) !== 'undefined') {
-						$(this.placeholder).html(this.template(d));
-					} else {
-						$('#main-content').html(this.template(d));
-					}
+					$(this.placeholder).html(this.template(d));
 				}
 			})
 			

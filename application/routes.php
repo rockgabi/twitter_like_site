@@ -6,8 +6,15 @@
  */
 Route::get('account/register', array('as' => 'register', 'uses' => 'account@register'));
 Route::get('account/login', array('as' => 'login', 'uses' => 'account@login'));
+
 Route::get('resources/(:any)', array('as' => 'resourceAdd', 'uses' => 'resources@index'));
 Route::delete('resources/(:any)', array('as' => 'resourceDelete', 'uses' => 'resources@index'));
+
+Route::get('relations/(:any)/(:any)', array('as' => 'relationGet', 'uses' => 'relations@index'));
+Route::post('relations/(:any)/(:any)/(:any)', array('as' => 'relationPost', 'uses' => 'relations@index'));
+Route::delete('relations/(:any)/(:any)/(:any)', array('as' => 'relationDelete', 'uses' => 'relations@index'));
+
+// Route::get('request/(:any)', array('as' => 'requestGet', 'uses' => 'request@index'));
 
 /*
  * Controller Routes
@@ -17,6 +24,8 @@ Route::controller('account');
 Route::controller('home');
 Route::controller('resources');
 Route::controller('profile');
+Route::controller('relations');
+Route::controller('request');
 
 
 

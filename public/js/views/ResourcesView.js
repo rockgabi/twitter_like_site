@@ -5,9 +5,7 @@ define(['backbone', 'tpl', '/js/app-definition.js'], function(Backbone, tpl, App
 
 			className: 'resource',
 
-			events: {
-				
-				
+			events: {				
 
 			},
 
@@ -33,6 +31,7 @@ define(['backbone', 'tpl', '/js/app-definition.js'], function(Backbone, tpl, App
 		className: 'resource-list',
 
 		initialize: function() {
+			$('#resources').html('<div class="ajax-loading">&nbsp;</div>');
 			this.collection.bind('reset', this.render, this);
 			this.collection.bind('add', this.addResource, this);
 			//this.collection.bind('destroy', this.removeResource, this);

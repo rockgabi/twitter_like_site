@@ -11,7 +11,8 @@ define(['backbone', '/js/app-definition.js'], function(Backbone, App) {
 
 		validate: function(attrs) {
 			if (attrs.resource === '') {
-				return 'A resource must have a content *resource attribue*';
+				console.log(attrs.resource);
+				return 'A resource must have a content *resource attribute*';
 			}
 		}
 	});

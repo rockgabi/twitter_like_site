@@ -7,8 +7,14 @@ Extension 1
 
 Extension 2
   ☐ Implement Friendship System
-    ☐ Update Model
+    ✔ Update Model @done (13-02-02 19:03)
     ☐ Generate involving services
+      ✔ Create get All Friends Request service @done (13-02-23 10:50)
+      ✔ Create Accept and Decline Friend Request service @done (13-02-23 11:08)
+      ✔ Create Request Class: Accept Request, Decline Request @done (13-02-23 11:08)
+      ✔ Create get Friends service @done (13-02-23 10:50)
+      ☐ Create Relationship Class: Accept Friend, Remove Friend
+      
     ☐ Implement involving client views
       ☐ View for adding/removing a friend
       ☐ View for listing and acception friendship incoming invitations

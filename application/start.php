@@ -76,6 +76,7 @@ Autoloader::map(array(
 Autoloader::directories(array(
 	path('app').'models',
 	path('app').'libraries',
+	'Blackhole' => path('app') . '/models/Blackhole'
 ));
 
 /*

@@ -17,7 +17,7 @@ require(['backbone', 'tpl', '/js/app-definition.js', '/js/models.js', '/js/views
 			new App.Router();
 			Backbone.history.start();
 			
-			do_styling();			
+			do_styling();
 
 		});
 
@@ -27,12 +27,11 @@ require(['backbone', 'tpl', '/js/app-definition.js', '/js/models.js', '/js/views
 				w = $(window).width(),
 				constWrapperWidth = 900,
 			// Accomodate this when styling changes
-			sidebarHeight = h - 51 - 20,
+			sidebarHeight = h - 91 - 20,
 			leftPosition = (w - constWrapperWidth) / 2 + constWrapperWidth - 290;
 			$('#sidebar').css({ height: sidebarHeight, left: leftPosition });
 			$('#overlay').css({ height: h - 51 });
 		}
-
 
 });
 

@@ -21,6 +21,11 @@ class Create_Users_Table {
 			'username' => 'Dexter',
 			'password' => Hash::make('knife')
 		));
+
+		DB::table('users')->insert(array(
+			'username' => 'Gabriel',
+			'password' => Hash::make('Negropro')
+		));
 	}
 
 	/**

@@ -22,3 +22,6 @@ It's intended to build the knowledge from a 'good practices' point of view. Usin
 ## Progressive development
 
 You can check the status of the development. There's a cool TODO list under the application folder under the name of todo.TODO, there you can follow the current portion of the project that's being planned and developed. It will be useful to reconstruct the path followed under the development process and therefore to understand the decision and restrictions that arouse.
+
+## Version
+Current Blackhole Version is 0.2

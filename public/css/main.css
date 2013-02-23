@@ -95,6 +95,12 @@ h1 {
     margin-bottom: 4px;
 }
 
+.ajax-loading {
+    background: url('../images/ajax-loader.gif') no-repeat 50%;
+    width: 100%;
+    height: 60px;
+}
+
 /*==========  Application  ==========*/
 
 #application {

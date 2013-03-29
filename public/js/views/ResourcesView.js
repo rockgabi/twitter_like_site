@@ -48,7 +48,7 @@ define(['backbone', 'tpl', '/js/app-definition.js'], function(Backbone, tpl, App
 				$(this.el).append( new App.Views.ResourcesItemView({ model: resource }).render().el);
 			}, this);
 			$('#resources').html(this.el);
-			this.delegateEvents(); // Vuelvo a redelegar los eventos, sino se pierden
+			this.delegateEvents(); // Redelegate event, if not you lose it
 		},
 
 		addResource: function(e,f) {

@@ -9,6 +9,7 @@
 	<script type="text/javascript">
 	// Application Connector with Backend
 		var bhConnector = <?php echo json_encode($connector); ?>;
+		var user_id = <?php echo Auth::user()->attributes['id']; ?>;
 	</script>
 
 	<script data-main= "/js/config.js" src="/js/vendor/requirejs-2.1.2.js"></script>
@@ -45,5 +46,10 @@
 		<div class="nav-item">
 			{{ HTML::link('#profile', 'Access your profile') }}
 		</div> <!-- Fin .nav-item -->
+
+		<div class="nav-item">
+			{{ HTML::link('#friends', 'Friends management') }}
+		</div> <!-- Fin .nav-item -->
+
 	</nav>	<!-- Fin #navigation -->
 @endsection

@@ -1,8 +1,8 @@
 
 /* Dependency injection */
 require(['backbone', 'tpl', '/js/app-definition.js', '/js/models.js', '/js/views/ResourcesView.js',
-	'/js/views/AddResourceView.js', '/js/views/profileView.js'],
-	function(Backbone, tpl, App, undefined, undefined, undefined, undefined) {
+	'/js/views/AddResourceView.js', '/js/views/profileView.js', '/js/views/FriendsView.js'],
+	function(Backbone, tpl, App, undefined, undefined, undefined, undefined, undefined) {
 
 		// template() helper function definition
 		App.Helpers.template = function(id) {
@@ -13,7 +13,7 @@ require(['backbone', 'tpl', '/js/app-definition.js', '/js/models.js', '/js/views
 		Application starts here
 		=============================================*/
 
-		tpl.loadTemplates(['single-resource', 'add-resource', 'profile'], function() {
+		tpl.loadTemplates(['single-resource', 'add-resource', 'profile', 'single-friend'], function() {
 			new App.Router();
 			Backbone.history.start();
 			

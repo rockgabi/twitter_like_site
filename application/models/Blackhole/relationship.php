@@ -11,15 +11,16 @@ class Relationship extends Eloquent {
 	 * @return Array           Return the relations of type $type for the user $user_id
 	 */
 	public static function relations($type, $user_id) {
-
+		// TODO: this assumes bidirectional relations, re-touch for both bidirectional or unidirectional support
 		$result = DB::table(Relationship::$table)
 			->where('user1_id', '=', $user_id)
 			->where('type', '=', $type)
-			->get();
-
+			->join('users', 'users.id', '=', 'user_relationship.user2_id')
+			->get(array(
+				'user_relationship.*', 'users.username'
+			));
 
 		return $result;
-
 	}
 
 	/**

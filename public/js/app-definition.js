@@ -11,8 +11,9 @@ define(['backbone'], function(Backbone){
 
 	App.Router = Backbone.Router.extend({
 		routes: {
-			'' : 'indexRoute',
-			'profile' : 'profileRoute'
+			'' 			: 'indexRoute',
+			'profile' 	: 'profileRoute',
+			'friends' 	: 'friendsRoute'
 		},
 
 		indexRoute: function() {
@@ -22,16 +23,17 @@ define(['backbone'], function(Backbone){
 			c.reset();
 
 			cv = new App.Views.ResourcesView({ collection: c });
+
 			c.fetch();
 
 			// Vista del nuevo recurso, se pasa como parametro la colección
 			// para que pueda actualizarla
 			ar = new App.Views.AddResourceView({ collection: c });
+
 		},
 
 		profileRoute: function() {
 			
-
 			if (typeof cv !== 'undefined') {
 				ar.remove();
 				cv.remove();
@@ -45,6 +47,21 @@ define(['backbone'], function(Backbone){
 			});
 
 			pv.render();
+		},
+
+		friendsRoute: function() {
+			if (typeof cv !== 'undefined') {
+				ar.remove();
+				cv.remove();
+				cv = undefined;
+			}
+
+			fc = new App.Collections.Friends({ user_id : user_id});
+			fv = new App.Views.FriendsView({ collection : fc });
+			fc.reset();
+
+			fc.fetch();
+			
 		}
 	});
 

@@ -16,7 +16,13 @@ Extension 2
       ☐ Create Relationship Class: Accept Friend, Remove Friend
       
     ☐ Implement involving client views
-      ☐ View for adding/removing a friend
-      ☐ View for listing and acception friendship incoming invitations
+      ☐ View for listing/adding/removing a friend
+        ✔ Listing @done (13-03-29 19:11)
+        ☐ Adding
+        ☐ Removing
+      ☐ View for listing/accepting/declining friendship incoming invitations
+        ☐ Listing
+        ☐ Acepting
+        ☐ Declining
       ☐ Update profile view for showing number of friends
     ☐ Do Styling

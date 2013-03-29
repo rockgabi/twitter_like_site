@@ -14,6 +14,7 @@ return array(
 	*/
 	'Services' => array(
 		'resources' => '/resources',
-		'profile' 	=> '/profile'
+		'profile' 	=> '/profile',
+		'friends'	=> '/relations/friend'
 	)
 );

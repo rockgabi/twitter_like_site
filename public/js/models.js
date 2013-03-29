@@ -37,4 +37,32 @@ define(['backbone', '/js/app-definition.js'], function(Backbone, App) {
 		}
 
 	});
+
+	App.Models.Friend = Backbone.Model.extend({
+		urlRoot: App.Connector.Services.friends,
+
+		defaults: {
+			'id' : null,
+			'related_started_at' : null,
+			'user1_id' : '',
+			'user2_id' : '',
+			'type' : 'friend'
+		},
+
+		initialize: function() {
+		}
+
+	});
+
+	App.Collections.Friends = Backbone.Collection.extend({
+		model: App.Models.Friend,
+
+		url: App.Connector.Services.friends,
+
+		initialize: function(data) {
+			// Url to get the friends collection for the current user (data.user_id)
+			this.url = this.url + '/' + data.user_id;
+		}
+
+	});
 });

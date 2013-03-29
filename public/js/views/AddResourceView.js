@@ -40,7 +40,7 @@ define(['backbone', 'tpl', '/js/app-definition.js'], function(Backbone, tpl, App
 			e.preventDefault();
 			var m = new App.Models.Resource({}),
 				res = $('#new-resource').val();
-			console.log(res);
+			// console.log(res);
 			var date = new Date();
 			// Para logging de errores:
 			m.on('error', function(e,c) { console.log(e.toJSON(),c); });

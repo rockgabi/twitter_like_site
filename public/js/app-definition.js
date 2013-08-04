@@ -56,11 +56,14 @@ define(['backbone'], function(Backbone){
 				cv = undefined;
 			}
 
+			// Friend list:
 			fc = new App.Collections.Friends({ user_id : user_id});
 			fv = new App.Views.FriendsView({ collection : fc });
 			fc.reset();
-
 			fc.fetch();
+
+			// Friends Search:
+			fs = new App.Views.SearchFriendsView({});
 			
 		}
 	});

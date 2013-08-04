@@ -32,7 +32,8 @@ define(['backbone', 'tpl', '/js/app-definition.js'], function(Backbone, tpl, App
 		id: 'friends',
 
 		initialize: function() {
-			$('#main-content').html('<div class="ajax-loading">&nbsp;</div>');
+			this.container = $('#main-content');
+			this.container.html('<div class="ajax-loading">&nbsp;</div>');
 			this.collection.bind('reset', this.render, this);
 		},
 
@@ -52,7 +53,8 @@ define(['backbone', 'tpl', '/js/app-definition.js'], function(Backbone, tpl, App
 			}, this);
 			// Now we show the generated 'el' into a DOM container
 			this.preprocessHtml();
-			$('#main-content').html(this.el);
+			$('.ajax-loading', this.container).remove();
+			this.container.append(this.el);
 			this.delegateEvents();
 		},
 

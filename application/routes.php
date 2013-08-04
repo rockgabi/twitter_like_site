@@ -2,6 +2,7 @@
 
 /*
  * Named Routes: Just for naming purposes
+ * Maps Routes an Parameters to Controllers and Actions
  * 
  */
 Route::get('account/register', array('as' => 'register', 'uses' => 'account@register'));

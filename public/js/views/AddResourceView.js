@@ -23,7 +23,7 @@ define(['backbone', 'tpl', '/js/app-definition.js'], function(Backbone, tpl, App
 		},
 
 		/**
-		 * Renders the view in the DOM
+		 * Renders the view into the DOM
 		 * @return {AddResourceView}
 		 */
 		render: function() {
